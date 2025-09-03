@@ -1,12 +1,6 @@
 # Local virtual environment
 .venv/
 
-# Local run outputs
-outputs/
-
-# Raw CSV inputs (not needed to run search)
-raw/
-
 # OS cruft
 .DS_Store
 

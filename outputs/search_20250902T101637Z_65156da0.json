@@ -1,0 +1,138 @@
+{
+  "query": "AI project management tools",
+  "top_n": 10,
+  "results": [
+    {
+      "name": "useToolCraft",
+      "url": "https://www.producthunt.com/posts/usetoolcraft",
+      "tags": [
+        "Productivity",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "upvotes": 7,
+      "release_date": "2025-08-26",
+      "description": "Find the right AI tools instantly - using live analysis, not a static directory. Then follow a clear, step-by-step plan tailored to your skills, budget, and timeline.",
+      "score": 0.662804365158081
+    },
+    {
+      "name": "Dowork",
+      "url": "https://www.producthunt.com/posts/dowork",
+      "tags": [
+        "['WEB APP'",
+        "'PRODUCTIVITY'",
+        "'TECH'",
+        "'DEVELOPER TOOLS']"
+      ],
+      "upvotes": 726,
+      "release_date": "2020-05-21",
+      "description": "Efficient project estimation starts with a proper work breakdown structure. Invite your colleagues, brainstorm, and create the breakdown together. Get started now for free! https://youtu.be/4iIy1HUOMio https://www.youtube.com/watch?v=4iIy1HUOMio",
+      "score": 0.6104062795639038
+    },
+    {
+      "name": "Tara AI for teams",
+      "url": "https://www.producthunt.com/posts/tara-ai-for-teams",
+      "tags": [
+        "['PRODUCTIVITY'",
+        "'DEVELOPER TOOLS'",
+        "'ARTIFICIAL INTELLIGENCE']"
+      ],
+      "upvotes": 750,
+      "release_date": "2020-10-29",
+      "description": "Agile, made easy. One workspace for your team's docs, sprints and tasks, synced to Github, or Gitlab. https://tara.ai/ is the simplest product development tool, designed for teams moving rapidly. https://app.tara.ai/login for developers and teams.",
+      "score": 0.6091719269752502
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://www.producthunt.com/posts/clickup-4",
+      "tags": [
+        "['SOFTWARE ENGINEERING'",
+        "'SAAS'",
+        "'PRODUCTIVITY']"
+      ],
+      "upvotes": 697,
+      "release_date": "2021-05-28",
+      "description": "Get the #1 free project management tool. All your work in one place: Tasks, docs, chat, goals, & more.",
+      "score": 0.6062459945678711
+    },
+    {
+      "name": "Project XYZ",
+      "url": "https://www.producthunt.com/posts/project-xyz",
+      "tags": [
+        "Productivity",
+        "Artificial Intelligence",
+        "Business"
+      ],
+      "upvotes": 13,
+      "release_date": "2025-08-24",
+      "description": "Project XYZ is the AI platform for the modern consultant, designed to help you work smarter. We combine traditional project management with a strategic layer of AI, giving you the power to automate, analyze, and advise with unprecedented clarity.",
+      "score": 0.6002386212348938
+    },
+    {
+      "name": "Pikto AI Studio",
+      "url": "https://www.producthunt.com/posts/pikto-ai-studio",
+      "tags": [
+        "Design Tools",
+        "SaaS",
+        "Artificial Intelligence"
+      ],
+      "upvotes": 275,
+      "release_date": "2025-08-26",
+      "description": "Most AI image tools solve just one problem. Pikto AI Studio streamlines your entire design workflow—generate, edit, and enhance images in one seamless platform. Create eye-catching, professional visuals with ease—no design skills needed.",
+      "score": 0.5979069471359253
+    },
+    {
+      "name": "Tara AI 2.0",
+      "url": "https://www.producthunt.com/posts/tara-ai-2-0-1",
+      "tags": [
+        "['PRODUCTIVITY'",
+        "'DEVELOPER TOOLS'",
+        "'ARTIFICIAL INTELLIGENCE']"
+      ],
+      "upvotes": 712,
+      "release_date": "2021-08-17",
+      "description": "Define, plan & track mission-critical product updates with Tara AI. Get instant insights into code progress. Tara AI is lightning-fast project management that helps teams ship product, with tasks, sprints & docs tied to code. Now with built-in automation.",
+      "score": 0.5968481302261353
+    },
+    {
+      "name": "Project Studio",
+      "url": "https://www.producthunt.com/posts/project-studio",
+      "tags": [
+        "['WINDOWS'",
+        "'PRODUCTIVITY'",
+        "'DEVELOPER TOOLS'",
+        "'TASK MANAGEMENT']"
+      ],
+      "upvotes": 65,
+      "release_date": "2018-04-18",
+      "description": "Project Studio is a tool to plan and organize your tasks and projects in an innovative way.",
+      "score": 0.5963096618652344
+    },
+    {
+      "name": "Projects.ly",
+      "url": "https://www.producthunt.com/posts/projects-ly-2",
+      "tags": [
+        "['PRODUCTIVITY'",
+        "'MARKETING'",
+        "'TECH']"
+      ],
+      "upvotes": 48,
+      "release_date": "2021-01-18",
+      "description": "Advanced project management tool with smart project planning, task management, issue management, and reporting features. Part of the 500apps business suite. The best and most intuitive online project management tool by 500apps.",
+      "score": 0.5940278768539429
+    },
+    {
+      "name": "Contours",
+      "url": "https://www.producthunt.com/posts/contours",
+      "tags": [
+        "Software Engineering",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "upvotes": 14,
+      "release_date": "2025-08-27",
+      "description": "7 fresh AI dev tools in your inbox every Thursday to boost your workflow or help you ship AI-enabled apps. No fluff, just tools you'll actually use.",
+      "score": 0.5919190645217896
+    }
+  ]
+}
