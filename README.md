@@ -1,6 +1,6 @@
 # Product Hunt Similarity Search
 
-**Find similar products to your startup idea instantly.** Search through 45,975 Product Hunt products from 2014-2025 using AI-powered semantic similarity.
+**Find similar products to your startup idea instantly.** Search through 79,355 Product Hunt products from 2014-2025 using AI-powered semantic similarity.
 
 ## What it does
 
@@ -13,7 +13,7 @@ Enter a description of your product idea (e.g., "AI meeting notes summarizer") a
 
 Perfect for market research, competitor analysis, and idea validation.
 
-## Quick start (2 minutes)
+## Quick start 
 
 **1. Setup** (one-time)
 
@@ -84,7 +84,7 @@ final_product_search/
 
 ## Data source
 
-- **45,975 products** from Product Hunt (2014-2025)
+- **79,355 products** from Product Hunt (2014-2025)
 - **Semantic embeddings** using sentence-transformers/all-MiniLM-L6-v2
 - **TF-IDF keywords** for match explanations
 - **Metadata:** name, description, tags, upvotes, release date, URL
