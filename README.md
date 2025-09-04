@@ -1,78 +1,127 @@
-# Product Hunt Similarity (final_product_search)
+# Product Hunt Similarity Search
 
-Self-contained release to search similar Product Hunt products.
-Most users only need to run setup and search; rebuilding the index is optional.
+**Find similar products to your startup idea instantly.** Search through 45,975 Product Hunt products from 2014-2025 using AI-powered semantic similarity.
 
-## Contents
+## What it does
 
-- `raw/` — input CSVs:
-  - `product-hunt-prouducts-1-1-2014-to-12-31-2021.csv`
-  - `product_hunt_2025_for_index.csv`
-- `scripts/` — helper scripts
-  - `setup.sh` — sets up a local virtual environment and installs deps
-  - `build.sh` — merges CSVs and builds artifacts
-  - `search.sh` — runs a search against the built artifacts
-- `build_index.py` — self-contained index builder
-- `search_cli.py` — CLI to query the index
-- `artifacts/` — output directory for vectors and metadata (created after build)
+Enter a description of your product idea (e.g., "AI meeting notes summarizer") and get:
 
-## Quick start (search only)
+- **Top 10 similar products** with names, descriptions, and Product Hunt URLs
+- **Upvotes and release dates** to gauge market validation
+- **Matching keywords** that explain why products are similar
+- **JSON export** for further analysis
 
-1. Setup the virtual environment
+Perfect for market research, competitor analysis, and idea validation.
+
+## Quick start (2 minutes)
+
+**1. Setup** (one-time)
 
 ```bash
+git clone https://github.com/shatskyy/final_product_search.git
 cd final_product_search
 bash scripts/setup.sh
 ```
 
-2. Run a search (saves JSON under `./outputs/` with a unique filename)
+**2. Search**
+
+```bash
+bash scripts/search.sh "your product idea here"
+```
+
+**Example:**
 
 ```bash
 bash scripts/search.sh "AI meeting notes summarizer with action items"
 ```
 
-What you get:
+**Results appear instantly** — no building required, the search index is prebuilt.
 
-- Top 10 matches with name, URL, tags, upvotes, release date (YYYY-MM-DD), and description
-- A JSON file saved in `outputs/` (e.g., `outputs/search_YYYYMMDDTHHMMSSZ_<id>.json`)
+## What you get
 
-Optional: direct JSON output
+**Console output:**
 
-```bash
-python search_cli.py \
-  "AI meeting notes summarizer with action items" \
-  --artifacts-dir . \
-  --out-json outputs/example.json
+```
+1. Scribe AI  (score=0.598)
+   URL: https://www.producthunt.com/posts/scribe-ai
+   Tags: ARTIFICIAL INTELLIGENCE, PRODUCTIVITY, MEETINGS
+   Upvotes: 146   Release: 2021-04-24
+   similar intent to: 'Automate note-taking and share highlights...'
 ```
 
-## CLI reference
+**JSON file:** Saved automatically in `outputs/` with timestamp (e.g., `search_20250902T101637Z_65156da0.json`)
+
+## Advanced usage
+
+**Direct CLI with custom options:**
 
 ```bash
-python search_cli.py "<your idea>" \
-  --artifacts-dir . \
-  [--top-n 10] [--k 50] [--quote-len 200] \
-  [--model sentence-transformers/all-MiniLM-L6-v2] \
-  [--out-json outputs/results.json]
+python search_cli.py "your idea" --artifacts-dir . --top-n 15 --out-json results.json
 ```
 
-## Optional: Rebuild the index
+**Options:**
 
-You do NOT need this to run searches. Rebuild only if you change CSVs or want to regenerate artifacts.
+- `--top-n` Number of results (default: 10)
+- `--k` Search breadth for better recall (default: 50, try 200 for more results)
+- `--quote-len` Max characters in similarity quotes (default: 200)
+
+## Project structure
+
+```
+final_product_search/
+├── README.md                 # This file
+├── search_cli.py            # Main search engine (241 lines)
+├── artifacts/               # Prebuilt search index (94MB)
+│   ├── vectors/             # Product embeddings (67MB)
+│   └── meta/                # Product metadata + keywords
+├── outputs/                 # Your search results (JSON)
+├── scripts/
+│   ├── setup.sh             # Install dependencies
+│   └── search.sh            # Search with auto-save
+└── raw/                     # Source data (20MB CSV)
+    └── product_hunt_2014_2025_merged.csv
+```
+
+## Data source
+
+- **45,975 products** from Product Hunt (2014-2025)
+- **Semantic embeddings** using sentence-transformers/all-MiniLM-L6-v2
+- **TF-IDF keywords** for match explanations
+- **Metadata:** name, description, tags, upvotes, release date, URL
+
+## Rebuild index (optional)
+
+Only needed if you modify the source data:
 
 ```bash
 bash scripts/build.sh
 ```
 
-This merges `raw/` CSVs and writes artifacts under `./artifacts/`:
+## Troubleshooting
 
-- `artifacts/vectors/vectors.npy`
-- `artifacts/meta/meta.parquet`
-- `artifacts/meta/idf.json`
-- `artifacts/meta/snapshot.json`
+**"Command not found"**
 
-## Environment and troubleshooting
+- Run `bash scripts/setup.sh` first
+- Or manually: `source .venv/bin/activate`
 
-- Scripts auto-activate the local venv. Manual activation (optional):
-  - `source .venv/bin/activate` (deactivate with `deactivate`)
-- If commands are not found, ensure you ran `bash scripts/setup.sh` from this folder.
-- If you get fewer than 10 results on tiny builds, increase recall: `bash scripts/search.sh "your query" --k 200`.
+**Getting fewer than 10 results**
+
+- Try: `bash scripts/search.sh "your query" --k 200`
+
+**Search seems slow**
+
+- First run downloads the AI model (~90MB), subsequent searches are fast
+
+## Requirements
+
+- Python 3.8+
+- 150MB free space (for dependencies + model)
+- Internet connection (first run only)
+
+## License & Attribution
+
+Built with sentence-transformers, pandas, and numpy. Product Hunt data used under fair use for research purposes.
+
+---
+
+**Questions?** Open an issue or check the code — it's well-commented and only ~600 lines total.
